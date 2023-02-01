@@ -23,17 +23,11 @@ liste = []  # empty list
 
 with open("task4.txt") as file:
     for line in file:
-        content = line.split()
-        print(content)
-
-        unit = content[1]
-        for 'kb' in unit:
-            float(content[0]) / 1000
-            liste.append(int(content[0]))
-        elif 'gb' in unit:
-            float(content[0]) * 1000
-            liste.append(int(content[0]))
-        else:
-            liste.append(int(content[0]))
+        value = int(line.split()[0])
+        unit = line.split()[1]
+        if unit == "Mbps":
+            liste.append(value)
+        elif unit == "Kbps":
+            liste.append(value / 1000)
 
 print(jainsall(liste))
