@@ -28,9 +28,22 @@ for num in range(throughputsAmount):
 
 
 def jainsall(throughputs):
-    jfi = (sum([x ** 2 for x in throughputs])) / (throughputsAmount * sum(throughputs))
+    jfi = (sum([x for x in throughputs])) ** 2 / (throughputsAmount * sum(x ** 2 for x in throughputs))
     jfi = round(jfi, 4)
     return jfi
 
 
+# print(jainsall(throughputs))
+
+"""
+Read the throughput values from a file and then use your jainsall function to calculate a JFI.
+The text file contains:
+7 Mbps
+12 Mbps
+15 Mbps
+32 Mbps
+"""
+
 print(jainsall(throughputs))
+
+
