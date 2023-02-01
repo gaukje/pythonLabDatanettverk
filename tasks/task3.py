@@ -1,3 +1,11 @@
+"""
+Read the throughput values from a file and then use your jainsall function to calculate a JFI.
+The text file contains:
+7 Mbps
+12 Mbps
+15 Mbps
+32 Mbps
+"""
 def jainsall(data):
     N = len(liste)
 
